@@ -3,17 +3,83 @@
   <head>
     <title>웹 공부하기-CSS</title>
     <meta charset="utf-8">
+   <style>
+    a {
+      color:black;text-decoration: none;
+    }
+    #active{
+      color:blue;text-decoration:underline;font-size:18px;
+    }
+    h1 {
+      font-size:100px;
+      text-align:center;
+      border-bottom:2px solid black;
+      margin:0;
+      padding:30px;
+    }
+    body {
+      background-image: url("") ;
+      background-color: #958DB7;
+      margin:0;
+      font-family: 'Sunflower', sans-serif;
+    }
+    ol{
+      width:200px;
+      border-right:2px solid black;
+      margin:0;
+      padding:20px;
+    }
+    #grid{
+      display:grid;
+      grid-template-columns: 200px 1fr;
+    }
+    #grid ol{
+      padding-left:33px;
+    }
+    #article{
+      padding-left:75px;
+    }
+   </style>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
+<div id="grid">
     <ol>
-      <li><a href="111.html"> HTML</a></li>
-      <li><a href="222.html"> CSS</a></li>
-      <li><a href="333.html"> JavaScript</a></li>
-      <li><a href="웹서버 운영.html">웹서버 운영방법</a></li>
+      <li><a href="111.html" >HTML</a></li>
+      <li><a href="222.html"  id="active" >CSS</a></li>
+      <li><a href="333.html" >JavaScript </a></li>
+      <li><a href="웹서버 운영.html" >웹서버 운영방법</a></li>
     </ol>
-    <h2>CSS를 배워보자!</h2>
-    <p>
+  <div id="article">
+     <h2>CSS</h2>
+
+      <p>[font]는 1만개가있으면 1만개 전부 바꿔야함 =/= css[color]는 1만개를 한번에 바꿀 수 있음.
+      <br>css는 [tag]에서의 중복을 <u>제거</u>해줌.
+      <br>css는 <u>유지와 보수</u>를 편하게해줌.
+      <br>css는 html로 부터 <u>디자인의 기능</u>을 빼낸 것.
     </p>
+     <img src="css.png"width="40%">
+     <p>[style]=html의 속성
+     <br>a {☆}=선택자, ☆=효과 or 선언
+     <br>[text-decoration: none;]=밑줄 제거, 효과를 지정한 뒤엔 무조건 ;(세미콜론)
+     <br>[text-decoration:underline;]=(none사용 후)밑줄을 만드는 것
+     <br>하나의 태그에는 여러 속성 가능.
+  </p>
+     <p>[font-size:00px]=글자크기조절 [text-align]=글자 위치 정렬
+     <br> id선택자>class선택자>tag선택자(모두 형태가 같다=가장 마지막 우선순위)
+     <br>id선택자=단 한번(중복되선 안됨)
+     <br>css=구체적인 것(id선택자) > 포괄적인 것(tag선택)
+     <br>큰 그림(tag선택자)부터 그려놓고 수정(id선택자)하는 것
+     ※align=정렬하다 property=속성 value=종류
+     </p>
+     <p>[class="~~"]는 그룹으로 묶는 것.
+     <br>id선택자는 한번만. 중복 불가. 유일한 값.
+     <br>웹페이지 모든 a를 가르키는 선택자 < id값=active (더 구체적임 so 권한 더 높음)
+     <br>구체적인 정도. tag선택자 < class선택자 < id선택자
+     </p>
+   </div>
+</div>
   </body>
   </html>
